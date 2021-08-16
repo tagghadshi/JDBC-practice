@@ -1,0 +1,8 @@
+2021-08-16 08:58:59,809 INFO c.t.j.d.JDBCDemo [main] Connection to DB successfull
+2021-08-16 09:07:54,236 INFO c.t.j.d.JDBCDemo [main] Connection to DB successful
+2021-08-16 09:08:09,897 DEBUG c.t.j.d.JDBCDemo [main] Connection to DB successful
+2021-08-16 09:09:02,205 DEBUG c.t.j.d.JDBCDemo [main] Connection to DB successful
+2021-08-16 09:09:02,950 DEBUG c.t.j.d.JDBCDemo [main] Americas
+2021-08-16 09:09:02,951 DEBUG c.t.j.d.JDBCDemo [main] Asia
+2021-08-16 09:09:02,951 DEBUG c.t.j.d.JDBCDemo [main] Europe
+2021-08-16 09:09:02,952 DEBUG c.t.j.d.JDBCDemo [main] Middle East and Africa

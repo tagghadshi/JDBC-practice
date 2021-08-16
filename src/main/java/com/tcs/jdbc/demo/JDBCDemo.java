@@ -8,19 +8,26 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class JDBCDemo {
+	private static final Logger logger = LogManager.getLogger(JDBCDemo.class);
 	public static void main(String[] args) {
 		String DB_URL = "jdbc:mysql://localhost/practice";
 		String DB_USER = "root";
 		String DB_PASSWORD = "Nuvelabs123$";
-
+		
+		logger.debug("Connection to DB successful");
+		
 		try (Connection connnection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 				Statement statement = connnection.createStatement();) {
 //				insert(statement);
 //				retrieve(statement);
 //				update(statement);
 //			    delete(statement);
-//			List<String> regions = retrieveWithCondition(statement, "A");// regions starting with A
+			List<String> regions = retrieveWithCondition(statement, "A");// regions starting with A
+			logger.debug(regions);
 //			System.out.println(regions);
 			orderBy(statement);
 		} catch (SQLException e) {
@@ -32,7 +39,7 @@ public class JDBCDemo {
 	private static void orderBy(Statement statement) throws SQLException {
 		ResultSet rs = statement.executeQuery("Select * from regions Order by Region_name");
 		while (rs.next()) {
-			System.out.println(rs.getNString("Region_name"));
+			logger.debug(rs.getNString("Region_name"));
 		}
 
 	}
@@ -59,8 +66,9 @@ public class JDBCDemo {
 	private static void retrieve(Statement statement) throws SQLException {
 		ResultSet resultSet = statement.executeQuery("Select * from regions");
 		while (resultSet.next()) {
-			System.out.println(resultSet.getInt(1));
-			System.out.println(resultSet.getNString("REGION_NAME"));
+			logger.debug(resultSet.getNString("REGION_NAME"));
+//			System.out.println(resultSet.getInt(1));
+//			System.out.println(resultSet.getNString("REGION_NAME"));
 		}
 	}
 
