@@ -20,22 +20,30 @@ public class JDBCDemo {
 //				retrieve(statement);
 //				update(statement);
 //			    delete(statement);
-			List<String> regions = retrieveWithCondition(statement, "A");// regions starting with A
-			System.out.println(regions);
-
+//			List<String> regions = retrieveWithCondition(statement, "A");// regions starting with A
+//			System.out.println(regions);
+			orderBy(statement);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 
 	}
 
+	private static void orderBy(Statement statement) throws SQLException {
+		ResultSet rs = statement.executeQuery("Select * from regions Order by Region_name");
+		while (rs.next()) {
+			System.out.println(rs.getNString("Region_name"));
+		}
+
+	}
+
 	private static void delete(Statement statement) throws SQLException {
 		boolean resultSet = statement.execute("Delete from Regions where Region_id = 5");
-		
+
 	}
 
 	private static List<String> retrieveWithCondition(Statement statement, String s) throws SQLException {
-		ResultSet resultSet = statement.executeQuery("Select * from regions where Region_name like '%"+s+"%'");
+		ResultSet resultSet = statement.executeQuery("Select * from regions where Region_name like '%" + s + "%'");
 		List<String> regions = new ArrayList<String>();
 		while (resultSet.next()) {
 			regions.add(resultSet.getNString("REGION_NAME"));
