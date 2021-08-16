@@ -8,11 +8,14 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
 
 public class JDBCDemo {
-	private static final Logger logger = LogManager.getLogger(JDBCDemo.class);
+	private static final Logger logger = LoggerFactory.getLogger(JDBCDemo.class);
 	public static void main(String[] args) {
 		String DB_URL = "jdbc:mysql://localhost/practice";
 		String DB_USER = "root";
@@ -27,7 +30,7 @@ public class JDBCDemo {
 //				update(statement);
 //			    delete(statement);
 			List<String> regions = retrieveWithCondition(statement, "A");// regions starting with A
-			logger.debug(regions);
+			logger.debug("{}",regions);
 //			System.out.println(regions);
 			orderBy(statement);
 		} catch (SQLException e) {
