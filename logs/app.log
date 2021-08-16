@@ -24,3 +24,19 @@
 2021-08-16 09:44:38,915 DEBUG c.t.j.d.JDBCDemo [main] Asia
 2021-08-16 09:44:38,915 DEBUG c.t.j.d.JDBCDemo [main] Europe
 2021-08-16 09:44:38,916 DEBUG c.t.j.d.JDBCDemo [main] Middle East and Africa
+2021-08-16 09:47:32,496 DEBUG c.t.j.d.JDBCDemo [main] Connection to DB successful
+2021-08-16 09:47:33,156 DEBUG c.t.j.d.JDBCDemo [main] [Americas, Asia, Middle East and Africa]
+2021-08-16 09:47:33,158 DEBUG c.t.j.d.JDBCDemo [main] Americas
+2021-08-16 09:47:33,158 DEBUG c.t.j.d.JDBCDemo [main] Asia
+2021-08-16 09:47:33,158 DEBUG c.t.j.d.JDBCDemo [main] Europe
+2021-08-16 09:47:33,158 DEBUG c.t.j.d.JDBCDemo [main] Middle East and Africa
+2021-08-16 09:48:09,570 DEBUG c.t.j.d.JDBCDemo [main] Connection to DB successful
+2021-08-16 09:48:10,263 DEBUG c.t.j.d.JDBCDemo [main] id=1
+2021-08-16 09:48:10,263 DEBUG c.t.j.d.JDBCDemo [main] Europe
+2021-08-16 09:48:10,263 DEBUG c.t.j.d.JDBCDemo [main] id=2
+2021-08-16 09:48:10,264 DEBUG c.t.j.d.JDBCDemo [main] Americas
+2021-08-16 09:48:10,264 DEBUG c.t.j.d.JDBCDemo [main] id=3
+2021-08-16 09:48:10,264 DEBUG c.t.j.d.JDBCDemo [main] Asia
+2021-08-16 09:48:10,264 DEBUG c.t.j.d.JDBCDemo [main] id=4
+2021-08-16 09:48:10,264 DEBUG c.t.j.d.JDBCDemo [main] Middle East and Africa
+2021-08-16 09:48:10,266 DEBUG c.t.j.d.JDBCDemo [main] [Americas, Asia, Middle East and Africa]

@@ -26,13 +26,13 @@ public class JDBCDemo {
 		try (Connection connnection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 				Statement statement = connnection.createStatement();) {
 //				insert(statement);
-//				retrieve(statement);
+				retrieve(statement);
 //				update(statement);
 //			    delete(statement);
 			List<String> regions = retrieveWithCondition(statement, "A");// regions starting with A
 			logger.debug("{}",regions);
 //			System.out.println(regions);
-			orderBy(statement);
+//			orderBy(statement);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -69,6 +69,7 @@ public class JDBCDemo {
 	private static void retrieve(Statement statement) throws SQLException {
 		ResultSet resultSet = statement.executeQuery("Select * from regions");
 		while (resultSet.next()) {
+			logger.debug("id={}",resultSet.getInt(1));
 			logger.debug(resultSet.getNString("REGION_NAME"));
 //			System.out.println(resultSet.getInt(1));
 //			System.out.println(resultSet.getNString("REGION_NAME"));
